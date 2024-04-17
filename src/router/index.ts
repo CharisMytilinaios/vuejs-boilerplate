@@ -5,13 +5,13 @@ import {
   type RouteRecordRaw,
   type RouterHistory,
 } from 'vue-router';
-import App from '@/App.vue';
+import RootLayout from '@/layouts/root-layout/RootLayout.vue';
 
 const routes: readonly RouteRecordRaw[] = [
   {
     path: '/',
     name: 'App',
-    component: App,
+    component: RootLayout,
     children: [
       {
         path: '/home',

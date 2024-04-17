@@ -9,7 +9,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 
-const mode = useColorMode();
+const mode = useColorMode({ initialValue: 'dark' });
 
 const changeColorMode = (modeToChange: 'light' | 'dark' | 'auto') => {
   mode.value = modeToChange;
@@ -19,7 +19,7 @@ const changeColorMode = (modeToChange: 'light' | 'dark' | 'auto') => {
 <template>
   <DropdownMenu>
     <DropdownMenuTrigger as-child>
-      <Button variant="outline">
+      <Button variant="ghost">
         <Icon
           icon="radix-icons:moon"
           class="h-[1.2rem] w-[1.2rem] dark:rotate-0 dark:scale-100 transition-all -rotate-90 scale-0"
